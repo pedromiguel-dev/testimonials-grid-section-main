@@ -1,0 +1,146 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Light-grayish-blue);
+    width: 100vw;
+    min-height: 100vh;
+}
+.container{
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "um""dois""tres""quatro""cinco"
+    ;
+}
+.card{
+    margin: 0 1.25rem 1.25rem 1.25rem;
+    padding: 1.25rem;
+    font-size: 0.8125rem;
+    border-radius: 0.3125rem;
+    box-shadow: 10px 30px 35px var(--Light-gray);
+    overflow: hidden;
+    height: min-content;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    font-size: 0.625rem;
+
+    &--um{
+        grid-area: um;
+    }
+    &--dois{
+        grid-area: dois;
+    }
+    &--tres{
+        grid-area: tres;
+    }
+    &--quatro{
+        grid-area: quatro;
+    }
+    &--cinco{
+        grid-area: cinco;
+    }
+    &--roxo{
+        background-color: var(--Moderate-violet);
+        background-image: url("../images/bg-pattern-quotation.svg");
+        background-repeat: no-repeat;
+        background-position: right;
+        background-position-y: top;
+        background-position-x: 90%;
+    }  
+    &--cinzaClaro{
+        background: var(--Very-dark-grayish-blue);
+
+    }
+    &--cinza{
+        background: var(--Very-dark-blackish-blue);
+    }
+    &--branco{
+        background: white;
+    }
+
+
+    &__perfil{
+        width: max-content;
+        align-items: center;
+        display: grid;
+        grid-auto-flow: column;
+        margin-bottom: 0.9375rem;
+    }
+   
+    &__img{
+        width: 1.875rem;
+        border-radius: 50%;
+        border: rgba(255, 255, 255, 0.487) 0.125rem solid;
+        margin-right: 0.625rem;
+        &--branco{
+            border: var(--Light-gray);
+        }
+    }
+    &__NomeStatus{
+       width: max-content;
+       text-align: center;
+       font-family: 'Barlow Semi Condensed', sans-serif;
+       font-weight: 500;
+    }
+    &__nome{
+        color: white;
+        font-size: 0.625rem;
+        &--branco{
+            color: var(--Very-dark-blackish-blue);
+        }
+    }
+    &__status{
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.5rem;
+        &--branco{
+            color: var(--Light-gray);
+        }
+    }
+    &__texts{
+        width: 100%;
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        font-weight: 600;
+    }
+    &__quote{
+        color: white;
+        font-size: 1.25rem;
+        margin-bottom: 0.9375rem;
+        &--branco{
+            color: var(--Very-dark-grayish-blue);
+        }
+
+    }
+    &__history{
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.8125rem;
+        &--branco{
+            color: hsla(217, 19%, 35%, 0.70)
+        }
+    }
+}
+
+@media (min-width: 53.125rem){
+    .container{
+        margin: 0;
+        padding: 0;
+        max-width: 1000px;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        gap:1rem;
+        grid-template-areas: 
+        "um um dois cinco"
+        "tres quatro quatro cinco";
+        .card{
+            margin: 0rem;
+            height: 100%;
+        }
+    }
+}

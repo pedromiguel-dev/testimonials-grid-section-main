@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--Light-grayish-blue);
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.container {
+  margin-top: 2.5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "um" "dois" "tres" "quatro" "cinco";
+}
+
+.card {
+  margin: 0 1.25rem 1.25rem 1.25rem;
+  padding: 1.25rem;
+  font-size: 0.8125rem;
+  border-radius: 0.3125rem;
+  -webkit-box-shadow: 10px 30px 35px var(--Light-gray);
+          box-shadow: 10px 30px 35px var(--Light-gray);
+  overflow: hidden;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 500;
+  color: black;
+  font-size: 0.625rem;
+}
+
+.card--um {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: um;
+}
+
+.card--dois {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: dois;
+}
+
+.card--tres {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: tres;
+}
+
+.card--quatro {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: quatro;
+}
+
+.card--cinco {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: cinco;
+}
+
+.card--roxo {
+  background-color: var(--Moderate-violet);
+  background-image: url("../images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-y: top;
+  background-position-x: 90%;
+}
+
+.card--cinzaClaro {
+  background: var(--Very-dark-grayish-blue);
+}
+
+.card--cinza {
+  background: var(--Very-dark-blackish-blue);
+}
+
+.card--branco {
+  background: white;
+}
+
+.card__perfil {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  margin-bottom: 0.9375rem;
+}
+
+.card__img {
+  width: 1.875rem;
+  border-radius: 50%;
+  border: rgba(255, 255, 255, 0.487) 0.125rem solid;
+  margin-right: 0.625rem;
+}
+
+.card__img--branco {
+  border: var(--Light-gray);
+}
+
+.card__NomeStatus {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 500;
+}
+
+.card__nome {
+  color: white;
+  font-size: 0.625rem;
+}
+
+.card__nome--branco {
+  color: var(--Very-dark-blackish-blue);
+}
+
+.card__status {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.5rem;
+}
+
+.card__status--branco {
+  color: var(--Light-gray);
+}
+
+.card__texts {
+  width: 100%;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 600;
+}
+
+.card__quote {
+  color: white;
+  font-size: 1.25rem;
+  margin-bottom: 0.9375rem;
+}
+
+.card__quote--branco {
+  color: var(--Very-dark-grayish-blue);
+}
+
+.card__history {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8125rem;
+}
+
+.card__history--branco {
+  color: rgba(72, 85, 106, 0.7);
+}
+
+@media (min-width: 53.125rem) {
+  .container {
+    margin: 0;
+    padding: 0;
+    max-width: 1000px;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    gap: 1rem;
+        grid-template-areas: "um um dois cinco" "tres quatro quatro cinco";
+  }
+  .container .card {
+    margin: 0rem;
+    height: 100%;
+  }
+}
+
+:root {
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+/*# sourceMappingURL=style.css.map */
